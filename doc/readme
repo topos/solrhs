@@ -1,0 +1,21 @@
+Requires:
+  ubuntu/debian
+  ghc-7.6.3
+  haskell-platform-2013.2.0.0
+  cabal-dev-0.9.2
+
+To install the first two, execute the following:
+  cd ./opt
+  rake all
+The install ghcs and haskell platform to /opt/hp/.
+
+To initialize haskell development environment, execute the following:
+  rake dev:init
+It'll install gems, cabal-dev, and cabal packages. 
+
+To update gem packages and to share work consistently, execute the following:
+  rake cabal:install
+It'll read the cabal packages from ./lib/cabal-dev.list and install them locally
+to your dev. environment.
+
+NB: the rake files presume that ghc and haskell-platform live in /opt/hp
